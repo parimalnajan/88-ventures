@@ -14,21 +14,21 @@ export const InterTight = Inter_Tight({
   weight: ["300", "400", "500", "700"],
   subsets: ["latin"],
   display: "swap",
-  fallback: [ "Arial"],
+  fallback: ["Arial"],
 })
 declare module "@mui/material/Typography" {
   interface TypographyPropsVariantOverrides {
     body3: true
     body4: true
     bodyXL: true
-    title1:true
+    title1: true
   }
 }
 // Create a theme instance.
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#B225EB", 
+      main: "#B225EB",
       light: "#9CA3AF",
       dark: "#111827",
       contrastText: "#ffffff",
@@ -48,18 +48,18 @@ const theme = createTheme({
     fontFamily: InterTight.style.fontFamily,
 
     //@ts-ignore
-    title1:{
-      fontWeight:400,
+    title1: {
+      fontWeight: 400,
       fontSize: "16px",
       lineHeight: "24px",
-    },  
+    },
     body1: {
-      fontWeight:400,
+      fontWeight: 400,
       fontSize: "12px",
       lineHeight: "16px",
     },
     body2: {
-      fontWeight:400,
+      fontWeight: 400,
       fontSize: "14px",
       lineHeight: "20px",
     },
