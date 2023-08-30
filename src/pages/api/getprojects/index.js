@@ -12,7 +12,7 @@ export default async function handler(req, res) {
           if (error) {
             return res.status(500).json({ error: "Failed to fetch entries" });
           }
-          console.log('11111111111111',entries)
+          // console.log('11111111111111',entries)
           const dataWithImages = await Promise.all(
             entries.map(async (entry) => {
               const { data: image, error: storageError } = await supabase.storage
@@ -26,7 +26,7 @@ export default async function handler(req, res) {
               return { ...entry, image };
             })
           );
-          console.log('222',dataWithImages)
+          // console.log('222',dataWithImages)
 
 
           return res.status(200).json({data:dataWithImages});
